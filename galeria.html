@@ -1,0 +1,109 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Fem servir la mateixa secció que al index per l'inici de la galeria però amb diferent text i amb el botó de contacte-->
+            <section id="inici">
+                <img alt="imatge del festival" src="./imatges/Slider imgs/Foto boirasound 4.png">
+                <div>
+                    <!--Titol principal amb H1-->
+                    <h1>Benvinguts al BoiraSound!</h1>
+                    <p>Galeria d'esdeveniments anteriors</p>
+                    <button><a href="contacte.html" id="botoContacte">Contacta'ns</a></button>
+                </div>
+            </section> 
+            <!--Creem amb format Bootstrap els contenidors, files i columnes per afegir les imatges i que aquestes siguin adaptables a mida mobil i ordenador-->            
+            <section>
+                <article >
+                    <!--Subtítols amb H2-->
+                    <h2>Imatges destacades</h2>
+                    <!--Com volem que es facin grans al clicar necessitem diferents tipus de classes per indicar-ho al css i js-->
+                    <div class = "container" >
+                        <div class="row justify-content-center rowimgDestacades">
+                            <div class="col-md-4 ">
+                                <img class="imgDestacades imgPetita"  src="./imatges/Slider imgs/Foto boirasound 1.png">
+                            </div>
+                            <div class="col-md-4 ">
+                                <img class="imgDestacades imgPetita" src="./imatges/Slider imgs/Foto boirasound 3.png">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center rowimgDestacades">
+                            <div class="col-md-4 ">
+                                <img class="imgDestacades imgPetita" src="./imatges/Slider imgs/Foto boirasound 2.png">
+                            </div>
+                            <div class="col-md-4 ">
+                                <img class="imgDestacades imgPetita" src="./imatges/Slider imgs/Foto boirasound 4.png">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--Slider que s'anima amb els keyframes del css-->
+            <section class="filaGaleria">
+                    <ul>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 1.png"></li>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 3.png"></li>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 2.png"></li>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 4.png"></li>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 5.png"></li>
+                        <li><img src="./imatges/Slider imgs/Foto boirasound 6.png"></li>
+                        <li><img src="./imatges/Slider imgs/Mapa esquerra.png"></li>
+                        <li><img src="./imatges/Slider imgs/Mapa dreta.png"></li>
+                    </ul>
+            </section>
+        
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+    <script src="./js/codi.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Títol a mida del H2-->
+            <h2>Política de cookies</h2>
+            <!--Explicació de les cookies. Estan separades amb article de classe politiques que al css definirem el seu estil--> 
+            <article class="politiques">
+                <!--Subtítols a mida del H3-->
+                <h3>Què són les cookies?</h3>
+                <!--Explicacions a mida de p-->
+                <p>Les cookies són petits arxius de text que es descarreguen al teu dispositiu (ordinador, tauleta o mòbil) quan visites un lloc web. Aquestes cookies permeten al lloc web reconèixer el teu dispositiu i recordar informació sobre la teva visita, com les teves preferències d'idioma, la configuració de sessió o altres opcions.</p>
+            </article>
+            <article class="politiques">
+                <h3>Tipus de cookies que utilitzem</h3>
+                <p>Utilitzem diferents tipus de cookies per millorar l'experiència de navegació i proporcionar serveis personalitzats:</p>
+                <!--Llista amb diferents punts-->
+                <ul>
+                    <li>Cookies essencials: Necessàries per al correcte funcionament del lloc web. Sense elles, algunes funcionalitats no estarien disponibles.</li>
+                    <li>Cookies d'anàlisi: Ens permeten comprendre com els usuaris interactuen amb la web per millorar-ne l'experiència (ex: Google Analytics).</li>
+                    <li>Cookies de funcionalitat: Recorden configuracions i preferències per oferir una experiència més personalitzada.</li>
+                    <li>Cookies publicitàries: S'utilitzen per mostrar anuncis rellevants i limitar la quantitat de vegades que es mostra un mateix anunci.</li>
+                    <li>Cookies de tercers: Algunes funcionalitats poden dependre de serveis externs que també utilitzen cookies, com vídeos de YouTube o xarxes socials.</li>
+                    </ul>
+            </article>
+            <article class="politiques">
+            <h3>Com pots gestionar les cookies?</h3>
+            <p>Pots configurar el teu navegador per acceptar, bloquejar o eliminar cookies. Cada navegador té un procediment diferent:</p>
+                <ul>
+                    <li>Google Chrome: Configuració → Privadesa i seguretat → Cookies i altres dades del lloc.</li>
+                    <li>Mozilla Firefox: Opcions → Privadesa i seguretat → Cookies i dades del lloc</li>
+                    <li>Microsoft Edge: Configuració → Cookies i permisos del lloc.</li>
+                    <li>Safari: Preferències → Privadesa → Gestiona les dades del lloc web.</li>
+                </ul>
+            </article>
+            <article class="politiques">
+                <h3>Cookies de tercers</h3>
+                <p>En algunes pàgines del nostre lloc web poden aparèixer serveis oferts per tercers (vídeos de YouTube, botons per compartir a xarxes socials, etc.). Et recomanem consultar les seves polítiques:</p>
+                <!--Llista amb els diferents enllaços a les webs amb les seves cookies-->
+                <ul id="enllaçosCookies">
+                    <li><a href="https://www.google.com" target="_blank">Google (Analytics, YouTube)</a></li>
+                    <li><a href="https://www.facebook.com/policies/cookies/" target="_blank">Meta (Facebook, Instagram)</a></li>
+                    <li><a href="https://www.google.com/search?q=https://help.twitter.com/ca/rules-and-policies/twitter-cookies" target="_blank">X (Twitter)</a></li>
+                </ul>
+            </article>
+            <article class="politiques"> 
+                <h3>Actualitzacions d'aquesta política</h3>
+                <p>Ens reservem el dret de modificar aquesta política per adaptar-la a noves regulacions. Recomanem revisar aquesta pàgina periòdicament.</p>
+            </article>
+            <article class="politiques">
+                <h3>Contacte</h3>
+                <p>Si tens qualsevol dubte, pots contactar-nos a través del correu electrònic boirasound@festival.cat o del formulari de contacte del nostre lloc web.</p>
+            </article>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <script src="./js/codi.js"></script>
+    </body>
+</html>

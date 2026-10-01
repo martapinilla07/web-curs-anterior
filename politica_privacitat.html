@@ -1,0 +1,107 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Títol a mida del H2-->
+            <h2>Política de privadesa</h2>
+            <!--Explicació de les polítiques de privadesa. Estan separades amb article de classe politiques que al css definirem el seu estil-->
+            <article class="politiques">
+                <!--Subtítols a mida del H3-->
+                <h3>Informació que és recollida</h3>
+                <!--Explicacions a mida de p-->
+                <p>Quan visites el nostre lloc web o et registres al festival, podem recollir diferents tipus d'informació:</p>
+                <!--Llista amb diferents punts-->
+                <ul>
+                    <li>Informació personal: Nom, adreça de correu electrònic, número de telèfon i altres dades proporcionades en el registre o formulari de contacte.</li>
+                    <li>Informació de navegació: Adreça IP, tipus de dispositiu, navegador, ubicació aproximada i historial de pàgines visitades.</li>
+                    <li>Informació sobre preferències: Dades relacionades amb preferències de comunicació, subscripció a butlletins i interacció amb els nostres correus.</li>
+                    <li>Cookies i tecnologies similars: Per analitzar el trànsit del web i millorar l'experiència de l'usuari.</li>
+                </ul>
+            </article>
+            <article class="politiques"> 
+                <h3>Ús de la informació recollida</h3>
+                <p>Fem servir la informació recopilada per oferir el millor servei possible. Les finalitats inclouen:</p>
+                <ul>
+                    <li>Mantenir un registre dels usuaris registrats al festival.</li>
+                    <li>Gestionar la inscripció i l'enviament de comunicacions relacionades amb l'esdeveniment.</li>
+                    <li>Enviar informació rellevant, ofertes especials o notícies d'interès.</li>
+                    <li>Millorar la usabilitat del lloc web mitjançant l'anàlisi del comportament de l'usuari.</li>
+                    <li>Protegir la seguretat i evitar accessos no autoritzats.</li>
+                </ul>
+            </article>
+            <article class="politiques">
+                <h3>Enllaços a tercers</h3>
+                <p>El nostre web pot contenir enllaços a llocs externs (com plataformes de venda d'entrades o xarxes socials) amb polítiques de privadesa diferents. Un cop abandonis la nostra pàgina, no tenim control sobre el lloc de destinació i no som responsables de la protecció de les teves dades en aquests llocs de tercers.</p>
+            </article>
+            <article class="politiques">
+                <h3>Control de la seva informació personal</h3>
+                <p>Pots controlar l'ús de la teva informació de les següents maneres:</p>
+                <ul>
+                    <li>Modificació o eliminació de dades: Pots sol·licitar el canvi o l'esborrat de les teves dades contactant amb nosaltres.</li>
+                    <li>Gestió de subscripcions: Pots donar-te de baixa de les nostres llistes de correu quan vulguis.</li>
+                    <li>Configuració de cookies: Pots ajustar les preferències del teu navegador per bloquejar-ne l'ús.</li>
+                </ul>
+            </article>
+            <article class="politiques">
+                <h3>Canvis en la política de privadesa</h3>
+                <p>Ens reservem el dret d'actualitzar aquesta política en qualsevol moment. Et recomanem revisar-la periòdicament per estar informat sobre possibles canvis.</p>
+            </article>
+            <article class="politiques">
+                <h3>Contacte</h3>
+                <p>Si tens qualsevol dubte, pots contactar-nos a través del correu electrònic boirasound@festival.cat o del formulari de contacte del nostre lloc web.</p>
+            </article>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <script src="./js/codi.js"></script>
+    </body>
+</html>

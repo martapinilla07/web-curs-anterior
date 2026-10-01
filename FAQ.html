@@ -1,0 +1,188 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca"> 
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <!--Títol a mida del H1-->
+                <h1>Preguntes Freqüents</h1>
+            </section>
+            <!--Utilitzem el Bootstrap perquè el disseny sigui responsive i s'adapti a la mida de la pantalla. Creem un container on aniran tots els elements i també una única fila per totes les cartes, en canvi, una columna per cadascuna. Cada carta està dividida amb una classe general , una per la part de davant i una per la part de darrera. Gràcies a això després podrem aplicar les característiques i els efectes corresponents a cada classe--> 
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="carta"> 
+                            <div class="caraDavant">
+                                <h3>On i quan se celebra el festival?</h3>
+                            </div>
+                            <div class="caraDarrera"> 
+                                <p>El festival tindrà lloc als Camps Elisis de Lleida els dies 10, 11 i 12 d’abril.</p>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>Com puc arribar-hi amb transport públic?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Pots utilitzar les línies d'autobús urbà de Lleida (línies: L1, L2). Si vens de fora, l'estació de tren de Lleida-Pirineus és a pocs minuts a peu del recinte.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>Puc comprar l'entrada a taquilla o només per internet?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Recomanem comprar-les anticipadament a través del web oficial. Si no s'exhaureixen, n'hi haurà una quantitat limitada a la taquilla el mateix dia del festival.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta"> 
+                            <div class="caraDavant">
+                                <h3>Puc entrar i sortir del recinte un cop hagi accedit?</h3>
+                            </div>
+                            <div class="caraDarrera"> 
+                                <p>Sí, però només si tens l'abonament o l'entrada amb polsera acreditativa. Les entrades de dia no permeten el reaccés un cop s'abandona el recinte.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>Els menors d'edat poden entrar?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Sí. Els menors de 16 anys han d'anar acompanyats pel pare, mare o tutor legal i portar l'autorització signada. Els menors d'entre 16 i 18 anys poden entrar sols amb l'autorització corresponent.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>Hi haurà opcions de menjar per a vegetarians o celíacs?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Sí, a la zona de food trucks comptarem amb una oferta gastronòmica variada que inclou opcions veganes, vegetarianes i productes sense gluten.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta"> 
+                            <div class="caraDavant">
+                                <h3>Quins objectes estan prohibits?</h3>
+                            </div>
+                            <div class="caraDarrera"> 
+                                <p> Per seguretat, no es permet l'entrada d'objectes punxants, ampolles de vidre, llaunes, paraigües grans o qualsevol element que l'organització consideri perillós.</p>
+                            </div>
+                        </div> 
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3> Puc portar la meva pròpia càmera de fotos professional?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>L'ús de càmeres professionals i equips d'enregistrament de vídeo està reservat exclusivament a la premsa acreditada. Està permès l'ús de telèfons mòbils i càmeres compactes domèstiques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3> Hi haurà zona de "Objectes Perduts"?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Sí, hi haurà un punt d'informació a l'entrada del recinte on es gestionaran els objectes perduts durant els dies del festival.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta"> 
+                            <div class="caraDavant">
+                                <h3>Què passa si plou?</h3>
+                            </div>
+                            <div class="caraDarrera"> 
+                                <p>El festival seguirà endavant en cas de pluja moderada. Només se suspendria o s'ajornaria si les condicions meteorològiques posessin en risc la seguretat dels assistents o els artistes.</p>
+                            </div>
+                        </div>         
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>Hi haurà servei de consigna per guardar motxilles o objectes personals?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Sí, el recinte disposarà d'un servei de lloguer de taquilles i consigna a prop de l'accés principal perquè puguis gaudir dels concerts amb total comoditat i seguretat.</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                        <div class="carta">
+                            <div class="caraDavant">
+                                <h3>El recinte és accessible per a persones amb mobilitat reduïda?</h3>
+                            </div>
+                            <div class="caraDarrera">
+                                <p>Totalment. Els Camps Elisis estan adaptats amb rampes d'accés, zones elevades amb visibilitat preferent davant dels escenaris i lavabos específics per a persones amb mobilitat reduïda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <script src="./js/codi.js"></script>
+    </body>
+</html>

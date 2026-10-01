@@ -1,0 +1,266 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--onmousemove crida la funció del js cada vegada que el ratolí es mou per la pàgina-->
+    <body onmousemove="mourenota(event);">
+        <!--Icona de nota musical que segueix el cursor, configurada des del css i js-->
+        <i id="notamusical" class="fa-solid fa-music"></i>
+    <!--Dividim el body amb header, main i footer-->
+        <!--Encapçalament-->
+        <header>
+            <!--Element purament de navegació apart que també ajuda a l'estructura-->
+            <nav> 
+                <!--Checkbox que actua com un interruptor ocult que fa que s'obri i es tanqui el menú-->
+                <input type="checkbox" id="menu-toggle">
+                <!--Icona d'amburguesa que sol apareix quan l'ample de la pantalla és menor de 768px i amb el menu-toggle fa que quan es cliqui l'hamburgueseta s'encengui l'interruptor i surti el desplegable del menú-->
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+
+                <!--Llista d'enllaços per la barra de navegació-->
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Contingut principal de la web-->
+        <main>
+            <!--Per separar elements ho fem a través de seccions i divisors.-->
+            <!--Secció hero amb un botó per anar a la pàgina del registre-->
+            <section id="inici">
+                <img alt="imatge del festival" src="./imatges/Img Inici.png">
+                <div>
+                    <!--Titol principal amb H1-->
+                    <h1>Benvinguts al BoiraSound!</h1>
+                    <p>El festival de música catalana més important del territori lleidatà.</p>
+                    <button><a href="registre.html" id="botoContacte">Registra't</a></button>
+                </div>
+            </section>
+            <!--Contingut sobre l’esdeveniment i un calendari amb les dates. Estructurat amb bootstrap per ordenar i fer la web visualment més atractiva tant en ordenador com en tablet o telèfon mòbil-->       
+            <!--El Bootstrap és un fitxer css extern que ens ajuda a distribuir la pàgina, funciona amb divisors classificats per contenidors > files > columnes per determinar quants objectes i de quina mida pot anar a cada lloc-->     
+            <section>
+                <article id = "DatesGeneral">
+                    <!--Subtítols amb H2-->
+                    <h2>Dates</h2>
+                    <div id="dates" class="container">  <!--Contenidor gran-->
+                        <div class="row justify-content-center"> <!--Fila amb la justificació centrada-->
+                            <div class="col-md-7 "> <!--Columna de mida mitjana amb 7 de 12 columnes d'amplada-->
+                                <p>El Boira Sound Festival arriba a Lleida per oferir una experiència sonora única en un entorn emblemàtic. Durant tres dies, els Camps Elisis es transformaran en l’epicentre de la música catalana, combinant directes potents amb l’essència cultural de Ponent. Comptarem amb una selecció d’artistes de primer nivell, zones de gastronomia local i un ambient dissenyat per gaudir de la música en totes les seves formes.</p>
+                                <p>Durant el festival, podràs vibrar amb concerts de gran format, descobrir nous talents del panorama musical i compartir moments inoblidables en un espai preparat per a la convivència i la celebració. Serà una oportunitat única per connectar amb la cultura i la innovació musical sota el cel de la nostra ciutat.</p>
+                                <p>Reserva aquestes dates a la teva agenda i prepara’t per viure un cap de setmana ple de ritme i emocions. No et perdis l’oportunitat de formar part d’aquest festival únic! Assegura’t de treure la teva entrada amb antelació per garantir la teva plaça.</p>
+                            </div>
+                            <div class="col-md-3 "> <!--Columna de mida mitjana amb 3 de 12 columnes d'amplada-->
+                                <img  src="./imatges/calendari.jpg" class="img-fluid d-block mx-auto" alt="10,11,12 d'abril">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+                <!--Taula amb l'itinerari de l'esdeveniment en format taula. Relació de les activitats en funció dels dies i les hores -->
+                <article>
+                    <h2>Itinerari de l'esdeveniment</h2>
+                    <table class="table"> <!--El bootstrap també conté classes per fer adaptables i personalitzables fàcilment les taules com per exemple amb el thead per diferenciar la capçalera del cos-->
+                        <thead class="table-light">
+                        <tr>
+                            <th> Hora </th>
+                            <th> Dia 1 </th>
+                            <th> Dia 2 </th>
+                            <th> Dia 3 </th>
+                        </tr></thead>
+                        <tbody>
+                        <tr> 
+                            <th> 10:00 - 11:00 </th>
+                            <td> - </td>
+                            <td> Taller de Música </td>
+                            <td> Taller de Picses a càrrec de la Casa Torradelles </td>
+                        </tr>
+                        <tr>
+                            <th> 11:00 - 12:00 </th>
+                            <td> - </td>
+                            <td> Actuació dels Marracons de la ULD </td>
+                            <td> Xop Xop - Teatre de titelles</td>
+                        </tr>
+                        <tr>
+                            <th> 12:00 - 13:00 </th>
+                            <td> - </td>
+                            <td> Madesónia </td>
+                            <td> La Olla Gran </td>
+                        </tr>
+                        <tr>
+                            <th> 18:00 - 20:00 </th>
+                            <td> Els Oncles </td>
+                            <td> Ratxango </td>
+                            <td> Soo </td>
+                        </tr>
+                        <tr>
+                            <th> 20:00 - 22:00 </th>
+                            <td> Anecs Prims </td>
+                            <td> Trienni </td>
+                            <td> Tancament del festival </td>
+                        </tr>
+                        <tr>
+                            <th> 22:00 - 24:00 </th>
+                            <td> Els Quescs </td>
+                            <td> La Fúga</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <th> 24:00 - 02:00 </th>
+                            <td> Mussols </td>
+                            <td> Socorro </td>
+                            <td> - </td>
+                        </tr></tbody>
+                    </table>
+                </article>
+                <!--Patrocinadors amb targetes d'efecte de gir: davant el logo, darrere el nom i l'enllaç-->
+            <section>
+                <article id="patrocinadors">
+                    <h2>Patrocinadors</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3"> <!--Cada col-md-3 és un patrocinador que conté l'efecte carta amb dues cares: logo i informació-->
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="san migranya" src="./imatges/Patrocinadors/San Migranya.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Sant Migranya</p>
+                                        <a href="https://www.sanmiguel.com/es/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                 <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="casa torradelles" src="./imatges/Patrocinadors/Casa Torradelles.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Casa Torradelles</p>
+                                        <a href="https://casatarradellas.es/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="estrella nodamm" src="./imatges/Patrocinadors/Esretlla Nodamm.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Estrella Nodamm</p>
+                                        <a href="https://www.estrelladamm.com/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="queixa banc" src="./imatges/Patrocinadors/Queixa Banc.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Queixa Banc</p>
+                                        <a href="https://www.caixabank.cat/particular/home/particulars_ca.html" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="encesa" src="./imatges/Patrocinadors/Encesa.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Encesa</p>
+                                        <a href="https://endesaluz.es/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="morir-tz" src="./imatges/Patrocinadors/Morir-tz.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Morir-tz</p>
+                                        <a href="https://moritz.com/ca/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="pizza queen" src="./imatges/Patrocinadors/Pizza Queen.png">
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Pizza Queen</p>
+                                        <a href="https://www.burgerking.es/ca/ " target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="carta"> 
+                                    <div class="caraDavantPatro">
+                                        <img alt="blankita" src="./imatges/Patrocinadors/Blankita.png">   
+                                    </div>
+                                    <div class="caraDarreraPatro">
+                                        <p>Blankita</p>
+                                        <a href="https://negrita.es/" target="_blank" class="canvipg">Visita'ns</a>
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--Botó per anar al formulari de contacte-->
+            <section id="botoContacte">
+                <button><a href="contacte.html">Contacta'ns</a></button>
+            </section>
+        </main>
+        <!--Peu de pàgina amb les icones de les xxss enllaçades, enllaços d'interès (termes i condicions, política de cookies, política de privadesa) i el copyright-->
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <!--Pop up d'alerta de benvinguda, surt al carregar la pàgina i es tanca amb el botó-->
+        <div  id= tancar class="alerta">
+            <div class="contingutAlerta">
+            <p>Benvinguts al BoiraSound!</p>
+            <button onclick="tancarAlerta()">Toooop!</button> <!--Onclick crida la funció del js que amaga aquest div-->
+            </div>
+        </div>
+        <!--Carreguem el js al final del body perquè la pàgina ja estigui carregada quan s'executi i així no tardi en carregar la pàgina per culpa del js-->
+        <script src="./js/codi.js"></script> 
+    </body>
+</html>

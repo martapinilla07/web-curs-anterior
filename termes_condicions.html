@@ -1,0 +1,107 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+       <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Títol a mida del H2-->
+            <h2>Termes i condicions del festival BoiraSound</h2>
+            <!--Explicació dels termes i condicions. Estan separades amb article de classe politiques que al css definirem el seu estil-->
+            <article class="politiques">
+                <!--Subtítols a mida del H3-->   
+                <h3>Objectiu</h3>
+                <!--Explicacions a mida de p-->
+                <p>Aquests termes i condicions regulen la participació i l’assistència al festival Boira Sound. En registrar-te i/o adquirir la teva entrada, acceptes complir aquestes condicions.
+                </p>
+            </article>
+            <article class="politiques"> 
+                <h3>Organització</h3>
+                <p>El festival està organitzat per Boira Sound.S.L., amb seu a Lleida, i qualsevol consulta pot ser dirigida a través del formulari de contacte del web o al correu electrònic: boirasound@festival.cat.</p>
+            </article>
+            <article class="politiques">    
+                <h3>Àmbit d’Aplicació</h3>
+                <p>Aquests termes són aplicables a tots els assistents, artistes, personal de l’staff i empreses col·laboradores del festival.
+                </p>
+            </article> 
+            <article class="politiques">
+                <h3>Dinàmica de l’Esdeveniment</h3>
+                <p>El festival inclou concerts, sessions de DJ i activitats culturals. Els horaris i el cartell d'artistes estan disponibles a la secció "Dates" del web. L’organització es reserva el dret de modificar la programació per motius logístics o de força major.</p>
+            </article>
+            <article class="politiques">
+                <h3>Inscripció i Accés</h3>
+                <p>L’accés requereix la presentació d’una entrada vàlida. L’organització es reserva el dret d’admissió per motius de seguretat o aforament. Els menors d’edat hauran de complir la normativa vigent d’accés a esdeveniments musicals a Catalunya.</p>
+            </article>
+            <article class="politiques">
+                <h3>Drets de Propietat Intel·lectual</h3>
+                <p>Tots els continguts creats durant el festival (imatges, vídeos o enregistraments) estan protegits. No es permet l’ús comercial de les imatges del festival sense autorització expressa de l’organització.</p>
+            </article>
+            <article class="politiques">
+                <h3>Comportament i Normes</h3>
+                <p>Cal mantenir una actitud respectuosa. No es tolerarà cap conducta abusiva, discriminatòria o que posi en risc la seguretat dels assistents. L’incompliment d’aquesta norma pot suposar l’expulsió del recinte.</p>
+            </article>
+            <article class="politiques">
+                <h3>Política de Cancel·lació</h3>
+                <p>En cas de suspensió de l'esdeveniment per causes alienes a l'organització, s'informarà els assistents sobre les polítiques de reemborsament seguint la legislació vigent.</p>
+            </article>
+            <article class="politiques">
+                <h3>Protecció de Dades</h3>
+                <!--Enllaçat amb la nostra pàgina de política de privacitat-->
+                <p>Les dades recollides durant la compra d'entrades seran tractades segons la nostra <a href="politica_privacitat.html">Política Privacitat.</a>Tens dret a accedir, rectificar o eliminar les teves dades en qualsevol moment.</p>
+            </article>
+            <article class="politiques">
+                <h3>Contacte</h3>
+                <p>Per a qualsevol dubte sobre aquests termes, pots contactar-nos a: boirasound@festival.cat.</p>
+            </article>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <script src="./js/codi.js"></script>
+    </body>
+</html>

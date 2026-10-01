@@ -1,0 +1,624 @@
+/* El CSS està organitzat de la següent manera: part general de la web, índex, FAQ i patrocinadors, registre i formularis, contacte, polítiques, galeria, configuració per a mòbils  */
+/* El CSS és la part on es configura tot allò visual de la pàgina web com són separacions, colors, tipus de texts, mides, animacions, etc. de tots els arxius HTML del Boirasound */
+
+
+/* Part general de la web */
+    body{ /* Definim l'estil de la pàgina general: color de fons, fonts de text, mida. */
+        background-color:azure;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        /* Definim els marges generals de la pàgina web */
+        margin: 15px;
+        padding-top: 125px;
+    }
+
+
+    /* Navegador */
+    nav{ /* Definim l'estil de la caixa del navegador general blau amb cantonades arrodonides */
+        background-color: rgb(156, 218, 249);
+        border-radius: 5px;
+        position: fixed;
+        top: 0px;
+        left: 15px;
+        right: 15px;
+        z-index: 1000; /*Perquè la barra de navegació sempre estigui per sobre dels altres elements*/
+    }   
+
+    nav ul{ 
+    /* L'estil de la llista perquè no surti el predeterminat: li diem que no tingui estil i definim els marges */
+        list-style-type: none;
+        padding: 0px 0;
+        margin: 0;
+        width: 100%;
+        /* Afegim un display flex per poder alinear horitzontalment i un align-items per centrar les coses verticalment */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Perquè la pàgina sigui responsive afegim un flex-wrap que fa que els elements baixin al acabar l'espai de pantalla */
+        flex-wrap: wrap;
+    }
+
+    nav .canvipg{ /* Hem creat una classe de text per al navegador perquè no afecti a la fotografia d'aquest */
+        margin:0 15px;
+        padding: 10px;
+        display: inline-block;
+    }
+    
+    nav ul li a {
+        display: flex;
+        justify-content: center; /* Centra la imatge horitzontalment */
+        align-items: center;     /* Centra la imatge verticalment */
+    }
+    
+    nav ul li a img{ /* Perquè la imatge quedi com volem li definim l'amplada màxima amb el height auto perquè sigui proporcional */
+        max-width: 70px;
+        height: auto;
+        display: block; /* Li diem que tingui un comportament de bloc per poder centrar-ho bé. */
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+
+    /* Enllaços */
+    a{ /* Per als enllaços definim un estil general, si algun que el volem diferent, canviem específicament aquell. */
+        color: rgb(254, 254, 254);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px; /* En el cas dels enllaços que tenen un hover aquest tindrà els cantons arrodonits */
+    }
+
+    .politiques a{ /*perquè els links de les pàgines de les polítiques es vegin*/
+        color: rgb(0, 81, 122);
+    }
+
+
+    /* Text */
+    h1{ /* Apliquem les propietats que volem que tingui cada tipus de text */
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 1%;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 1%;
+        padding-top: 2%;
+    }
+
+    h3{
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 1%;
+    }
+
+    p{
+        text-align: center;
+        padding-bottom: 3%;
+    }
+
+
+    /* Icones */
+    i{
+        transform: scale(1.5); /*per posar-les a l'escala que les volem*/
+        margin: 0 10px 0 10px;
+        color:rgb(255, 255, 255);
+    }
+
+    #xxss i{ /*per a les icones de la pàgina de contacta'ns*/
+        margin: 10px;
+        color: rgb(0, 157, 255);
+    }
+
+    #notamusical{ /*definim com ha de ser la nota musical que segueix el cursor, el color, la posició fixa perquè ens segueixi tot i fer el scroll, l'index z perquè surti per damunt de tot i ponter event none perquè no interactui al passar per damunt d'aquesta icona*/
+        color: rgb(0, 81, 122);
+        position:fixed;
+        z-index: 9000;
+        pointer-events: none;
+    }
+
+
+    /* Seccions */
+    section{ /* afegim padding i margin perquè visualment quedi més bonic*/
+        padding: 10px 5px 10px 5px;
+        margin: 15px 0 15px 0;
+    }
+
+
+    /* Articles */
+    article{ 
+        background-color: rgb(225, 244, 255); /*canviem el color de fons perquè es diferenciï bé*/
+        padding: 20px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+
+    /* Botons */
+    button{ /* Per als botons definim que tinguin una posició relativa envers el contenidor que els conté, definim els colors, les vores i les separacions */
+        position: relative;
+        background-color: rgb(0, 81, 122);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    #botoContacte{ /* Finalment, per al botó de contacte hem hagut de fer a part un text-align center perquè quedés centrat a la pàgina web */
+        text-align: center;
+    }
+
+
+    /* Efectes amb Hover i Active*/
+    .imgDestacades:hover{ /* L'efecte per quan passes per damunt el ratolí */
+        transform: scale(1.05);
+    }
+
+    .logotip:hover{ /* apliquem al logotip del BoiraSound una ombra i el fem més gran, quan el ratolí està a sobre*/
+        filter: drop-shadow(5px 5px 10px rgb(255, 255, 255));
+        transform: scale(1.1);
+    }
+
+    i:hover{ /* Fem un efecte per a les icones*/
+        color: rgb(0, 157, 255);
+        transform: scale(1.9);
+        cursor: pointer;
+    }
+
+    #xxss i:hover{ /*per a les icones de la pàgina de contacta'ns*/
+        color:  rgb(0, 81, 122);
+    }
+
+    .canvipg:hover{ /* L'efecte en interactuar amb els enllaços */
+        /* Fem servir hover perquè interactuï l'enllaç quan es passa el ratolí per damunt */
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 157, 255);
+        transform: scale(1.2);
+    }
+
+    .col-md-3:hover .carta ,.col-md-4:hover .carta{ /*efecte que simula una carta que gira, per això utilitzem el rotateY*/
+        transform: rotateY(180deg);
+    }
+
+    button:hover{ /* Quan el ratolí passi per damunt del botó canviarà l'opacitat al 80% i el cursor passarà a ser un pointer */
+        opacity: 80%;
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    button:active { /* En canvi, quan l'usuari cliqui el botó farà un efecte de disminució en prémer. */
+        transform: scale(0.8); /* Efecte de prémer */
+    }
+    
+
+    /* Footer */
+    footer{ /* L'apartat del footer és semblant al de navegació. Creem la caixa del footer */
+        background-color: rgb(156, 218, 249);
+        border-radius: 5px;
+        place-items: center;
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    footer ul{ /* Decidim com volem que la llista sigui en línia i sense estil de llista, tot centrat al mig; també ho apliquem a l'id xarxes socials que està dins de l'apartat Contacte */
+        list-style-type: none;
+        margin: 7px 15px 5px 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+/* Índex */
+    /*Pop up d'alerta a l'obrir la pàgina*/
+    .alerta {
+        display: flex;
+        position: fixed;
+        left: 0; 
+        top: 0;
+        z-index: 1000; /*perquè surti per sobre de tot el contingut de la web*/
+        width: 100%; 
+        height: 100%;
+        background-color: rgba(3, 46, 67, 0.5); /* Fons fosc darrere */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contingutAlerta { /*definim el color de fons, el de la lletra, la alineació i els marges del pop up que surt a l'entrar a la pàgina*/
+        background-color:  rgb(156, 218, 249); 
+        color: rgb(0, 81, 122);              
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    /* Secció hero */
+    #inici { /* Ho posem amb posició relativa al divisor anterior amb una alçada de 400px i tot centrat */
+        position: relative;
+        height: 400px;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #inici img{ /* En posició absoluta, és a dir comptant des del 0,0 de la pantalla, que no tingui ni dreta ni alt i que ho ocupi tot per després poder posar el text damunt de la imatge */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(30%); /*afegim un filtre de grisos*/
+        object-fit: cover; /* Això fa que no es deformi la imatge */
+        border-radius: 5px;
+    }
+
+    #inici div{ /* Ho posem amb posició relativa al divisor anterior amb un fons blau transparent */
+        background-color: rgb(225, 244, 255,0.7);
+        position: relative;
+        padding: 20px;
+        margin-top: 80px; /* Com volem que estigui al centre i l'alt de la imatge és de 400px i la caixa és de 240px, posem un margin-top de 80px */
+        border-radius: 5px;
+    }
+
+
+    /* Dates */    
+    #dates p{ /* El paràgraf de dates el volem justificat */
+        text-align: justify;
+    }
+ 
+    /* Itinerari de l'esdeveniment */
+    .table td{/* Fem una taula per als esdeveniments */
+        /* Definim les vores de les cel·les i que estigui alineat al centre */
+        background-color:rgb(225, 244, 255);
+        border: 0.5px solid grey;/* Gruix i color de les línies de la taula */
+        text-align: center;
+    }
+
+    .table th {
+        /* Definim les vores de les cel·les i que estigui alineat al centre */
+        background-color: rgb(183, 226, 247);
+        border: 0.5px solid grey;/* Gruix i color de les línies de la taula */
+        text-align: center;
+    }
+
+    .table-light th{ /* Solament en la fila principal li canviem el color */
+        background-color: rgb(0, 81, 122);
+        color:white; /*canviem el color de text solament a la fila principal*/
+    }
+
+
+/* FAQ i Patrocinadors*/
+    .carta{ /*classe per a cada targeta de pregunta-resposta*/
+        position: relative;
+        width: 100%;
+        height: 250px;
+        text-align: center;
+        transition: transform 0.8s;    /* velocitat del gir */
+        transform-style: preserve-3d; 
+        cursor: pointer; /*perquè es vegi que es produeix un efecte*/
+    }
+
+    .col-md-3, .col-md-4{ /*definim la perspectiva i el marge inferior que tenen les nostres columnes*/
+        perspective: 1000px;
+        margin-bottom: 30px;
+    }
+
+    .caraDavant, .caraDarrera, .caraDavantPatro, .caraDarreraPatro{ /*perquè tots els efectes de carta de gir tinguin les mateixes característiques*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;   /* amaga la part del darrere quan no està visible*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 5px;
+        border: rgb(0, 81, 122) solid 3px;
+        box-sizing: border-box;       
+    }
+
+    .caraDavant { /*el color de fons i el de la lletra per quan la carta no està girada*/
+        background-color: rgb(225, 244, 255);
+        color: rgb(0, 81, 122);
+    }
+
+    .caraDarrera { /*el color de fons i el de la lletra per quan la carta està girada, juntament amb la transformació*/
+        background-color: rgb(156, 218, 249);
+        color: #333;
+        transform: rotateY(180deg) 
+    }
+
+    .caraDavantPatro {/*definim els colors per a la part de davant de les cartes de patrocini*/
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 81, 122);
+    }
+
+    .caraDarreraPatro { /*definim el color de fons, la lletra, la rotació i la alineació per a la part de davant de les cartes de patrocini*/
+        background-color: rgb(156, 218, 249);
+        color: #333;
+        transform: rotateY(180deg);
+        flex-direction: column;    /* això posa els elements un damunt de l'altre */
+        font-weight: bold;
+    }
+
+    .caraDavantPatro img{ /* Definim la mida de les imatges */
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    
+/* Registre i formularis */
+    form{ /* Per als formularis definim el fons, tot centrat i amb una amplada mínima de 200px perquè no es xafi el disseny d'aquest i una màxima de 500 px perquè en ordinador no ocupi tot l'ample */
+        background-color: rgb(225, 244, 255);
+        place-items: center;
+        padding: 20px 15px 5px;
+        border-radius: 5px;
+        margin:0 auto 10% ;
+        min-width: 200px;
+        max-width: 500px;
+    }
+
+    form div{ /* Els divisors de formularis els separem per diferenciar les diferents caselles amb una vora blava de 2 píxels */
+        background-color: white;
+        margin: 15px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid  rgb(0, 81, 122);
+        width: 100%;
+    }
+
+    form input{ /* Definim que l'input no tingui vora i que tingui una amplada del 99% */
+    border: none;
+    min-width: 99%;
+    }
+
+
+/* Contacte */
+    #general-contacte{ /* Fem una graella per la part dels contacte */
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #mapa{ /* Definim l'apartat del mapa amb una amplada del 100% */
+        width: 100%;
+        padding: 0;
+    }
+
+    #mapa p{ /* En aquesta part exclusivament volem que el text estigui més junt */
+    margin: auto;
+    }
+
+    #mapa iframe{ /* L'enllaç del mapa de Google Maps volem que tingui un padding del 5% per costat i una amplada del 100% */
+        width: 100%;
+        padding: 0 5% 0 5%;    
+    }
+
+    /* Formulari de missatge */
+    #form-missatge{ /* Definim l'apartat del formulari, el fons i una vora blava de 2px */
+        background-color: transparent;
+        border: rgb(0, 81, 122) solid 2px;
+    }
+
+    #missatge{ /* Definim el 100% del divisor dins del seu contenidor */
+        width: 100%;
+    }
+
+    #missatge form{ /* Perquè el formulari no estigui enganxat a la vora posem un width del 90% */
+        margin:0 auto;
+        width: 90%;
+    }
+
+    textarea{ /* Definim la textarea per l'apartat de missatges */
+        font-family: Arial, Helvetica, sans-serif;
+        min-width: 195px;
+        height: 255px;
+        border: none;
+    }
+
+
+/* Polítiques */
+    .politiques{/* Definim els marges de les pàgines de polítiques */
+        margin-top:30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .politiques p{ /*redefinim els marges per al text*/
+        text-align: left;
+        margin-left: 20px;
+        padding-bottom: 10px;
+    }
+
+
+/*Galeria*/
+    /*Imatges destacades*/
+    .imgDestacades{ /*perquè ocupin el màxim d'ample possible i les cantonades arrodonides*/
+        width: 100%;
+        border-radius: 10px;    
+    }
+
+    .imgPetita{ /*característiques per quan no s'ha clicat a la imatge*/
+        cursor: pointer; /*perquè surti el cursor com un pointer perquè l'usuari sàpigui que es pot clicar*/
+        transition: transform 0.3s ease; /*els segons de la transformació*/
+    }
+
+   .imgPetita.gran { /*característiques per quan s'ha fet clic a la imatge*/
+    position: relative; /*perquè no estigui en un punt fix*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%) scale(1.2); /*perquè la imatge es recol·loqui i es faci més gran*/
+   
+    box-shadow: 0 0 0 100vmax rgba(3, 46, 67, 0.7); /*perquè la resta de l'app quedi amb una capa d'opacitat i destaqui més la imatge */
+}
+
+    /* Si una columna conté una imatge amb la classe .gran, pugem el z-index de tota la columna */
+    /*El :has() és un selector de CSS que et permet aplicar estils a un element en funció del que té a dins o dels elements que el segueixen, sense importar quins estils té el seu pare*/
+    .col-md-4:has(.imgPetita.gran) {
+        position: relative;
+        z-index: 2500; /*perquè quedi per sobre de tot*/
+    }
+
+    .rowimgDestacades{ /*característiques de les columnes del Bootstrap*/
+        display: flex;
+    }
+    
+    .rowimgDestacades div{
+        padding: 10px;
+    }
+    
+    
+    /* Slider */
+    /* Com ho hem donat a classe diverses vegades, ens ha semblat interessant per a la web fer un slider tot i que no se'ns demana; així fa l'efecte d'una web d'un festival més real */
+    .filaGaleria{ /* Li posem una amplada del 70% perquè les imatges no siguin tan grans */
+    width: 70%;
+    height: auto;
+    overflow: hidden; /* Això defineix que les imatges estiguin juntes sense separació entre elles */
+    margin: auto;
+    text-align: center;
+    filter: grayscale(30%);
+    }
+
+    .filaGaleria ul{ /* Definim que estiguin una al costat de l'altra amb una amplada del 400% per a dividir la llista en dos */
+        display: flex;
+        padding: 0;
+        width: 400%;
+        /* Fem una animació amb nom "slidergaleria" per definir els segons, que sigui lineal i es repeteixi de forma infinita */
+        animation: slidergaleria 40s infinite linear;
+        animation-direction: alternate;
+    }
+
+    .filaGaleria li{ /* Definim que la llista no tingui estil */
+        width: 100%;
+        list-style: none;
+    }
+
+    .filaGaleria img{ /* Definim la mida de les imatges i display block perquè no es deformin */
+        width: 100%;
+        height: auto;
+        border-radius:5px;
+        display: block;
+    }
+
+    @keyframes slidergaleria{ /* Aquesta part indica dins la duració de temps de 30 segons el percentatge de quedar-se quiet i el de canviar */
+        0%{
+            margin-left:0%;
+        } 
+        20%{
+            margin-left: 0%;
+        }
+        25%{
+            margin-left: -100%;
+        }
+        45%{
+            margin-left: -100%;
+        }
+        50%{
+            margin-left: -200%;
+        }
+        70%{
+            margin-left: -200%;
+        }
+        75%{
+            margin-left: -300%;
+        }
+        100%{
+            margin-left: -300%;
+        }
+    }
+    
+
+
+    /* 1. Amaguem el botó hamburguesa per defecte (PC) */
+    .hamburguesa {
+        display: none;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 15px;
+    }
+
+    #menu-toggle{
+        display: none;
+    }
+
+    /* 2. Configuració per a mòbils (més petits de 768px) */
+    @media (max-width: 768px) {
+        .menu { /*característiques per al menú: alineació del text, color de fons, posició i marges*/
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background: rgba(0, 81, 122,0.9);
+            padding: 15px;
+            position: absolute;
+            top: 60px;
+            left: 0;
+        }
+
+        .menu li { /*perquè els links de la navegació estiguin centrats i amb espai entre ells*/
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .hamburguesa {
+            display: block;
+        }
+
+        #menu-toggle:checked + .hamburguesa + .menu { /*com volem que es mostri quan l'usuari a clicat al menú d'hamburguesa*/
+            display: flex;
+        }
+
+        footer ul{ /*característiques de la llista del footer amb els enllaços*/
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+        footer ul li{ /*perquè hi hagi separació entre els links*/
+            margin: 10px;
+        }
+
+        body{ /*perquè no es vegi tan espai quan està amb la pantalla més petita*/
+            padding-top: 50px;
+        }
+
+        .filaGaleria{ /*perquè ocupi el màxim d'ample possible*/
+            width: 100%;
+        }
+
+        article{ /*canviem el padding perquè sigui millor visualment*/
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        article h2{
+            margin: 10px;
+        }
+
+        .table{ /*fem més petita la taula perquè es vegi bé*/
+            scale: 0.9;
+        }
+
+        .imgPetita.gran { /*fem les adaptacions perquè les imatges ampliades es vegin bé, canviant la seva posició, el translate i l'escala*/
+        position: relative;
+        transform: translate(-50%, -50%) scale(1.1); /* Corregit el translate perquè quedi ben centrat */
+        }
+
+        #form-missatge{ /*fem que hi hagi una mica mes de separació per una coherència visual*/
+            padding-bottom: 15px;
+        }
+
+        #notamusical { /*amaguem completament la nota musical en pantalles mòbils */
+            display: none;
+        }
+}

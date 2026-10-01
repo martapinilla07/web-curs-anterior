@@ -1,0 +1,112 @@
+<!--Tipus de codi de la fulla-->
+<!DOCTYPE html>
+<!--Llengua de la web-->
+<html lang="ca">
+    <!--Part tècnica no visible per a l'usuari.-->
+    <head>
+        <!--Per a tenir tots el caràcters necessaris per escriure-->
+        <meta charset="UTF-8">
+        <!--Disseny responsive / adaptable a mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Títol de la web-->
+        <title>BoiraSound</title>
+        <!--Enllacem el Bootstrap per organitzar la pàgina-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Enllaç amb el full d'estil / css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <!--Icona que apareix a la pestanya del navegador-->
+        <link rel="icon" type="image/png" href="./imatges/favicon.ico">
+        <!-- Font Awesome CDN per a les Icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <!--Les parts de l'explicació de l'estructura estan a l'índex-->
+    <body onmousemove="mourenota(event);">
+        <i id="notamusical" class="fa-solid fa-music"></i> 
+        <header>
+            <nav> 
+                <input type="checkbox" id="menu-toggle">
+                <label class="hamburguesa" for="menu-toggle" id="botoMenu"> <i class="fa-solid fa-bars"></i> </label>
+                <ul class="menu"> 
+                    <li><a href="index.html" class="logotip"><img src="./imatges/BoiraSound.png" alt="Logotip"></a> </li>
+                    <li><a href="index.html#DatesGeneral" class="canvipg">Dates</a></li>
+                    <li><a href="index.html#patrocinadors" class="canvipg">Patrocinadors</a></li>
+                    <li><a href="FAQ.html" class="canvipg">FAQ</a></li>
+                    <li><a href="contacte.html" class="canvipg">Contacte</a></li>
+                    <li><a href="registre.html" class="canvipg">Registre</a></li>
+                    <li><a href="galeria.html" class="canvipg">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Per separar elements ho fem a través de seccions.-->
+            <section> <!--Títol 1-->
+                <h1>Contacta'ns</h1>
+            </section>
+            <!--Secció per ajuntar els dos articles diferenciats-->
+            <section id="general-contacte"> 
+                <!--Part esquerra del mapa de google maps.-->
+                <article id="mapa"> 
+                    <!--En aquesta part posem el titol i els textos-->
+                    <h2>La nostra Ubicació!</h2>
+                    <p>Entre la boira de Lleida els millors sons.</p>
+                    <p>Adreça: Av. de les Garrigues, 25007 Lleida</p>
+                    <!--Afegim el link del mapa de l'esdeveniment amb iframe predeterminat de html que ens proporciona google maps-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5398.773943965388!2d0.6320269!3d41.61424609999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a6e065d434241b%3A0x16de5776a4ec728a!2sParc%20dels%20Camps%20Elisis!5e1!3m2!1sca!2ses!4v1775723459762!5m2!1sca!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!--Per a les xarxes socials fem una llista no ordenada amb icones de les xarxes socials extretes de Font Awesome on posem els links de les pàgines web pertinents a cada xarxa social.-->
+                    <ul id="xxss">
+                        <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                        <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                        <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+                    </ul>
+                </article>
+                <!--Part dreta de formulari de contacte.-->
+               <article id="form-missatge">
+                    <!--Títol 2-->
+                    <h2>Escriu-nos un missatge!</h2>
+                    <!--Fem un divisor amb identificador per poder modificar-->
+                    <div id="missatge">
+                        <!--Formulari on cada input té el seu propi div per poder separar els contenidors-->
+                        <form> 
+                            <div>
+                                <input type="text" id="nom" name="nom" placeholder="Nom..." maxlength="20" required>
+                            </div>
+                            <div> 
+                                <!--Utilitzem 'oninput' per comprovar al js si l'email es vàlid i si la contrasenya i la validació són iguals a temps real-->
+                                <input type="email" id="email" name="email" placeholder="Correu electrònic..." oninput="validarCorreu() " maxlength="40" required>
+                            </div>
+                            <div>
+                                <input type="text" id="assumpte" name="assumpte" placeholder="Assumpte..." maxlength="30" required>
+                            </div>
+                            <div> 
+                                <!--Per poder escriure més text creem una text area-->
+                               <textarea id="missatge" name="missatge" placeholder="Missatge..." required></textarea>
+                            </div>
+                            <!--Posem una secció amb el botó dins del formulari per poder enviar.-->
+                            <section id="botoContacte"> 
+                                <button>Enviar</button>
+                            </section>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/?locale=ca_ES" target="_blank"><i class="fa-brands fa-facebook-f" alt="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank"><i class="fa-brands fa-tiktok" alt="TikTok"></i></a>
+                <a href="https://x.com/?lang=ca" target="_blank"><i class="fa-brands fa-x-twitter" alt="Twitter/X"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube" alt="YouTube"></i></a>
+            </div>
+            <ul>
+                <li><a href="politica_privacitat.html" class="canvipg">Política Privacitat</a></li>
+                <li><a href="politica_cookies.html" class="canvipg">Política Cookies</a></li>
+                <li><a href="termes_condicions.html" class="canvipg">Termes Condicions</a></li>
+            </ul>
+            <p>&copy;2026  BoiraSound  -  By Marta Pinilla i Paula Vilella</p>
+        </footer>
+        <script src="./js/codi.js"></script> 
+    </body>
+</html>
